@@ -1,0 +1,127 @@
+@import "variables";
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  height: $header-height;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+#brand a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  img {
+    height: 55px;
+    width: auto;
+  }
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.desktop-nav {
+  height: 100%;
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  li {
+    margin-left: 40px;
+    a {
+      font-family: $brand-font;
+      font-size: 24px;
+      font-weight: 700;
+      color: $brand-color;
+      padding-bottom: 5px;
+      border-bottom: 2px solid transparent;
+      transition: border-color 0.3s;
+
+
+      &.btn {
+        font-family: $body-font; 
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 10px 35px;
+        background-color: $button-bg; 
+      }
+    }
+
+    a.active:not(.btn) {
+      border-bottom: 2px solid $brand-color;
+    }
+  }
+}
+
+
+#hamburger-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 101;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  div {
+    width: 30px;
+    height: 3px;
+    background-color: $brand-color;
+    margin: 2.5px 0;
+    transition: all 0.4s;
+    position: relative;
+  }
+  &.open {
+    background-color: $brand-color;
+    border-radius: 50%;
+    .bar1 {
+      background-color: #fff;
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .bar2 {
+      opacity: 0;
+    }
+    .bar3 {
+      background-color: #fff;
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(242, 92, 84, 0.97);
+  transition: left 0.5s ease-in-out;
+  z-index: 99;
+  &.open {
+    left: 0;
+  }
+  li {
+    margin: 20px 0;
+    font-size: 1.5rem;
+    a {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@import "variables";
+
+.home-container {
+   height: 100vh;
+   width: 100%;
+   background-image: linear-gradient($hero-bg-overlay, $hero-bg-overlay),
+      url(../images/hero.jpg);
+   background-size: cover;
+   background-position: center;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.hero-content {
+   position: relative;
+   width: 450px;
+   height: 400px;
+}
+
+.circle-large {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 357.58px;
+   height: 357.58px;
+   background-color: $large-circle-bg;
+   border-radius: 50%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 40px;
+   z-index: 1000;
+
+   h1 {
+      font-family: $brand-font;
+      font-size: 24px;
+      font-weight: 700;
+      color: $brand-color;
+      margin-bottom: 15px;
+      line-height: 1.1;
+   }
+
+   p {
+      font-size: 0.9rem;
+      max-width: 164px;
+      color: $brand-color;
+      font-weight: bold;
+      font-family: $body-font;
+   }
+}
+
+.circle-small {
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 167.88px;
+   height: 167.88px;
+   background-color: $small-circle-bg;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+   font-weight: 500;
+   font-size: 10px;
+   line-height: 1.4;
+   p{
+    color: $brand-color;
+    font-family: $body-font;
+    max-width: 105px;
+    font-weight: bold;
+    font-style: italic;
+   }
+   
+}

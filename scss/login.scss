@@ -1,0 +1,93 @@
+@import "variables";
+
+.login-container {
+   background-color: $large-circle-bg;
+   height: 100vh;
+   width: 100%;
+   padding-top: $header-height;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+}
+
+.form-wrapper {
+   display: flex;
+   justify-content: center;
+   align-items: flex-start;
+   width: 100%;
+   max-width: 900px;
+   gap: 100px;
+}
+
+.form-section {
+   width: 100%;
+   max-width: 350px;
+   text-align: center;
+
+   .btn {
+      width: auto;
+      padding: 10px 65px;
+      margin-top: 30px;
+      background-color: $large-circle-bg;
+      font-family: $brand-font;
+      font-size: 28px;
+      font-weight: 700;
+      color: $brand-color;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border-radius: 30px;
+   }
+}
+
+.login-form h2,
+.signup-form h3 {
+   font-family: $body-font;
+   font-size: 44px;
+   font-weight: 900;
+   margin-bottom: 70px;
+   color: $brand-color;
+}
+
+.signup-form .form-intro {
+   font-family: $body-font;
+   font-size: 1rem;
+   font-style: italic;
+   margin-bottom: 5px;
+   color: $brand-color;
+}
+
+.input-group {
+   position: relative;
+   margin-bottom: 60px;
+   text-align: left;
+
+   input {
+      width: 100%;
+      border: none;
+      border-bottom: 3px solid $brand-color;
+      background: transparent;
+      padding: 10px 0;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $brand-color;
+      outline: none;
+   }
+
+   label {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      font-family: $body-font;
+      font-size: 1rem;
+      color: $brand-color;
+      font-weight: 700;
+      pointer-events: none;
+      transition: 0.3s ease all;
+   }
+
+   input:focus ~ label,
+   input:valid ~ label {
+      top: -20px;
+      font-size: 0.8rem;
+   }
+}

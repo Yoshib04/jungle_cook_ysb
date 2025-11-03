@@ -1,0 +1,55 @@
+@media (max-width: 1024px) {
+  .desktop-nav {
+    display: none;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+
+  .hero-content {
+    transform: scale(0.8);
+  }
+
+  .form-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-section {
+    width: 80%;
+    max-width: 400px;
+  }
+  .login-form {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .hero-content {
+    transform: scale(0.65);
+  }
+
+  footer {
+    padding: 20px;
+  }
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-links {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+      margin: 5px 10px;
+    }
+  }
+  .social-icons {
+    margin-top: 10px;
+  }
+}

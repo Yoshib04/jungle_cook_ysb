@@ -1,0 +1,57 @@
+@import "variables";
+
+footer {
+   background-color: $secondary-bg;
+   padding: 20px 40px;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.footer-links a {
+   margin: 0 15px;
+   font-size: 0.9rem;
+}
+.social-icons {
+   display: flex;
+   gap: 15px;
+   a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+   }
+   img {
+      width: 24px;
+      margin-left: 0;
+   }
+}
+
+body.page-home footer,
+body.page-login footer {
+   background-color: transparent;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+}
+
+body.page-home footer {
+   color: $footer-text-color;
+   font-size: 15px;
+   .copyright,
+   .footer-links a {
+      color: $footer-text-color;
+   }
+   .social-icons a {
+      width: 32px;
+      height: 32px;
+      border: 1.5px solid $footer-text-color;
+      border-radius: 50%;
+      img {
+         width: 18px;
+         height: 18px;
+      }
+   }
+}
