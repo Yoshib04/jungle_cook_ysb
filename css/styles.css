@@ -360,7 +360,6 @@ body.page-home footer .social-icons a img {
 .form-section .btn {
   width: auto;
   padding: 10px 65px;
-  margin-top: 30px;
   background-color: #ffd972;
   font-family: "Caveat", cursive;
   font-size: 28px;
@@ -374,7 +373,7 @@ body.page-home footer .social-icons a img {
 .signup-form h3 {
   font-family: "Lato", sans-serif;
   font-size: 44px;
-  font-weight: 900;
+  font-weight: 700;
   margin-bottom: 70px;
   color: #3d2c21;
 }
@@ -383,13 +382,12 @@ body.page-home footer .social-icons a img {
   font-family: "Lato", sans-serif;
   font-size: 1rem;
   font-style: italic;
-  margin-bottom: 5px;
   color: #3d2c21;
 }
 
 .input-group {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: left;
 }
 .input-group input {

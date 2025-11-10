@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Jungle Cook</title>
     <link rel="stylesheet" href="css/styles.css" />
@@ -15,14 +15,21 @@
         </a>
       </div>
 
-      <!-- Wrapper for right-side navigation elements -->
       <div class="nav-wrapper">
         <nav class="desktop-nav">
-          <ul>
+          <!-- Logged OUT Menu -->
+          <ul class="logged-out">
             <li><a href="#home">Home</a></li>
             <li><a href="#browse">Browse</a></li>
             <li><a href="#create">Create Recipe</a></li>
             <li><a class="btn" href="#login">Login</a></li>
+          </ul>
+          <!-- Logged IN Menu (Initially Hidden) -->
+          <ul class="logged-in" style="display: none">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">Your Recipes</a></li>
+            <li><a href="#">Create Recipe</a></li>
+            <li><a href="#" id="logout-link">Logout</a></li>
           </ul>
         </nav>
         <div id="hamburger-icon">
@@ -34,11 +41,19 @@
     </header>
 
     <nav class="mobile-nav">
-      <ul>
+      <!-- Mobile Logged OUT Menu -->
+      <ul class="logged-out">
         <li><a href="#home">Home</a></li>
         <li><a href="#browse">Browse</a></li>
         <li><a href="#create">Create Recipe</a></li>
         <li><a class="btn" href="#login">Login</a></li>
+      </ul>
+      <!-- Mobile Logged IN Menu (Initially Hidden) -->
+      <ul class="logged-in" style="display: none">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#">Your Recipes</a></li>
+        <li><a href="#">Create Recipe</a></li>
+        <li><a href="#" id="mobile-logout-link">Logout</a></li>
       </ul>
     </nav>
 
@@ -60,7 +75,9 @@
         </div>
       </div>
     </footer>
+
+    <!-- Project Scripts (now using type="module") -->
     <script src="lib/jquery-3.7.1.min.js"></script>
-    <script src="app/app.js"></script>
+    <script type="module" src="app/app.js"></script>
   </body>
 </html>

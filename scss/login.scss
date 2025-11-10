@@ -28,7 +28,6 @@
    .btn {
       width: auto;
       padding: 10px 65px;
-      margin-top: 30px;
       background-color: $large-circle-bg;
       font-family: $brand-font;
       font-size: 28px;
@@ -43,22 +42,22 @@
 .signup-form h3 {
    font-family: $body-font;
    font-size: 44px;
-   font-weight: 900;
+   font-weight: 700;
    margin-bottom: 70px;
    color: $brand-color;
 }
+
 
 .signup-form .form-intro {
    font-family: $body-font;
    font-size: 1rem;
    font-style: italic;
-   margin-bottom: 5px;
    color: $brand-color;
 }
 
 .input-group {
    position: relative;
-   margin-bottom: 60px;
+   margin-bottom: 40px;
    text-align: left;
 
    input {
