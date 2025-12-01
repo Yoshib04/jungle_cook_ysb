@@ -1,0 +1,101 @@
+.page-browse, .page-your-recipes {
+  background-color: #bcebc9; /* Mint green */
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.browse-container, .your-recipes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px 60px 40px;
+
+  .page-title {
+    font-family: 'Caveat', cursive;
+    font-size: 2.5rem;
+    color: #3d2c21;
+    margin-bottom: 40px;
+  }
+
+  .recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 40px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .recipe-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    display: flex;
+    height: 320px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    position: relative;
+
+    @media (max-width: 600px) {
+      flex-direction: column;
+      height: auto;
+    }
+
+    .card-img {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      min-height: 200px;
+    }
+
+    .card-info {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #3d2c21;
+        display: inline-block;
+        padding-bottom: 5px;
+      }
+
+      p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        color: #3d2c21;
+      }
+
+      .meta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+        div {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          font-weight: 700;
+          font-size: 0.8rem;
+          
+          img { width: 25px; }
+        }
+      }
+
+      .view-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        
+      }
+    }
+  }
+}

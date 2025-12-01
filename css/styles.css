@@ -41,6 +41,8 @@ body {
   color: #333;
   background-color: #fff;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 body.page-home,
@@ -84,7 +86,7 @@ header {
   padding: 0 50px;
   height: 80px;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -105,6 +107,7 @@ header {
   display: flex;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .desktop-nav {
@@ -200,7 +203,6 @@ header {
 }
 
 footer {
-  background-color: #fdf6e3;
   padding: 20px 40px;
 }
 
@@ -289,7 +291,7 @@ body.page-home footer .social-icons a img {
   justify-content: center;
   text-align: center;
   padding: 40px;
-  z-index: 1000;
+  z-index: 1;
 }
 .circle-large h1 {
   font-family: "Caveat", cursive;
@@ -466,4 +468,394 @@ body.page-home footer .social-icons a img {
   .social-icons {
     margin-top: 10px;
   }
+}
+.page-browse, .page-your-recipes {
+  background-color: #bcebc9; /* Mint green */
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+.browse-container, .your-recipes-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 40px 60px 40px;
+}
+.browse-container .page-title, .your-recipes-container .page-title {
+  font-family: "Caveat", cursive;
+  font-size: 2.5rem;
+  color: #3d2c21;
+  margin-bottom: 40px;
+}
+.browse-container .recipe-grid, .your-recipes-container .recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .browse-container .recipe-grid, .your-recipes-container .recipe-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.browse-container .recipe-card, .your-recipes-container .recipe-card {
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  display: flex;
+  height: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+@media (max-width: 600px) {
+  .browse-container .recipe-card, .your-recipes-container .recipe-card {
+    flex-direction: column;
+    height: auto;
+  }
+}
+.browse-container .recipe-card .card-img, .your-recipes-container .recipe-card .card-img {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  min-height: 200px;
+}
+.browse-container .recipe-card .card-info, .your-recipes-container .recipe-card .card-info {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.browse-container .recipe-card .card-info h3, .your-recipes-container .recipe-card .card-info h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #3d2c21;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+.browse-container .recipe-card .card-info p, .your-recipes-container .recipe-card .card-info p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #3d2c21;
+}
+.browse-container .recipe-card .card-info .meta, .your-recipes-container .recipe-card .card-info .meta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.browse-container .recipe-card .card-info .meta div, .your-recipes-container .recipe-card .card-info .meta div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+.browse-container .recipe-card .card-info .meta div img, .your-recipes-container .recipe-card .card-info .meta div img {
+  width: 25px;
+}
+.browse-container .recipe-card .card-info .view-btn, .your-recipes-container .recipe-card .card-info .view-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  /* Usually an icon or styled link */
+}
+
+.page-create {
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.create-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 120px 20px 60px 20px;
+}
+.create-container .create-header h1 {
+  font-family: "Caveat", cursive;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: #3d2c21;
+}
+.create-container .input-group {
+  position: relative;
+  margin-bottom: 40px;
+}
+.create-container .input-group input {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #3d2c21;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  background: transparent;
+}
+.create-container .input-group input:focus ~ label, .create-container .input-group input:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 0.85rem;
+}
+.create-container .input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  transition: 0.3s ease;
+  pointer-events: none;
+}
+.create-container .input-group .attach-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #e8a09d;
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.create-container .input-group .add-btn {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  background: #e8a09d;
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.create-container .dynamic-section h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.create-container .submit-wrapper {
+  text-align: center;
+  margin-top: 60px;
+}
+.create-container .submit-wrapper .pink-btn {
+  background-color: #ea9f9e;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 30px;
+  font-family: "Caveat", cursive;
+  font-size: 1.6rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.create-container .submit-wrapper .pink-btn:hover {
+  transform: scale(1.02);
+}
+
+#file-name-display {
+  background-color: transparent; /* Remove gray background */
+  cursor: default; /* Show arrow instead of text cursor */
+  color: #3d2c21;
+}
+
+/* Inherits container styles from browse.scss */
+.your-recipes-container .recipe-card {
+  /* Specific styles for the "Your Recipes" card buttons */
+}
+.your-recipes-container .recipe-card .card-buttons {
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  display: flex;
+  gap: 10px;
+}
+.your-recipes-container .recipe-card .card-buttons button {
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: none;
+  font-family: "Caveat", cursive;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+.your-recipes-container .recipe-card .card-buttons .btn-view {
+  background-color: #ffd972;
+}
+.your-recipes-container .recipe-card .card-buttons .btn-edit {
+  background-color: #ffd972;
+}
+.your-recipes-container .recipe-card .card-buttons .btn-delete {
+  background-color: #ffd972; /* User screenshot shows all yellow */
+}
+
+.page-detail {
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.detail-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 120px 40px 100px 40px;
+  /* --- TOP SECTION --- */
+}
+.detail-container .detail-top {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+@media (max-width: 900px) {
+  .detail-container .detail-top {
+    flex-direction: column;
+  }
+}
+.detail-container {
+  /* LEFT COL: Title + Image */
+}
+.detail-container .visuals-col {
+  display: flex;
+  flex-direction: row; /* Side by Side */
+  align-items: flex-start;
+  gap: 15px;
+  /* Mobile: Stack them */
+}
+@media (max-width: 900px) {
+  .detail-container .visuals-col {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+}
+.detail-container .visuals-col #detail-title {
+  /* Vertical Text Logic */
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 1;
+  margin: 0;
+  text-transform: lowercase; /* Matches "supreme pizza" */
+  white-space: nowrap;
+  font-weight: bold;
+  color: #000;
+}
+@media (max-width: 900px) {
+  .detail-container .visuals-col #detail-title {
+    writing-mode: horizontal-tb;
+    transform: none;
+    margin-bottom: 20px;
+    text-align: center;
+    white-space: normal;
+  }
+}
+.detail-container .visuals-col .img-wrapper {
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+.detail-container .visuals-col .img-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Matches the sharp look of the mockup */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+.detail-container {
+  /* RIGHT COL: Meta Info */
+}
+.detail-container .meta-col {
+  flex: 1;
+  padding-top: 10px; /* Aligns with top of image */
+}
+.detail-container .meta-col .info-block {
+  margin-bottom: 40px;
+}
+.detail-container .meta-col .info-block h3 {
+  font-family: "Lato", sans-serif; /* Blocky Font */
+  font-weight: 900;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #000;
+  font-weight: bold;
+}
+.detail-container .meta-col .info-block p {
+  font-family: "Caveat", cursive; /* Handwritten Font */
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: #333;
+}
+.detail-container {
+  /* --- BOTTOM SECTION --- */
+}
+.detail-container .detail-bottom {
+  /* Aligns content to match the text start of the top section */
+  /* Padding left approximates the width of the vertical title + gap */
+  padding-left: 80px;
+}
+@media (max-width: 900px) {
+  .detail-container .detail-bottom {
+    padding-left: 0;
+  }
+}
+.detail-container .detail-bottom .list-block {
+  margin-bottom: 50px;
+}
+.detail-container .detail-bottom .list-block h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: #000;
+  font-weight: bold;
+}
+.detail-container .detail-bottom .list-block ul, .detail-container .detail-bottom .list-block ol {
+  padding: 0;
+  list-style: none;
+}
+.detail-container .detail-bottom .list-block li {
+  font-family: "Caveat", cursive;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 5px;
+  color: #333;
+}
+.detail-container .detail-bottom .list-block {
+  /* Ordered List Numbering */
+}
+.detail-container .detail-bottom .list-block ol {
+  counter-reset: inst-counter;
+}
+.detail-container .detail-bottom .list-block ol li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 15px;
+}
+.detail-container .detail-bottom .list-block ol li::before {
+  content: counter(inst-counter) ". ";
+  counter-increment: inst-counter;
+  font-family: "Caveat", cursive;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+}
+.detail-container .detail-bottom .action-block button {
+  background-color: #ffd972;
+  border: none;
+  padding: 10px 45px;
+  border-radius: 25px;
+  font-family: "Caveat", cursive;
+  font-size: 1.2rem;
+  font-weight: 700; /* Bold text inside button */
+  cursor: pointer;
+  font-style: italic; /* Matches screenshot button style */
 }

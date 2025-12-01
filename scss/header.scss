@@ -7,7 +7,7 @@ header {
   padding: 0 50px;
   height: $header-height;
   background-color: transparent;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -28,6 +28,7 @@ header {
   display: flex;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 
 .desktop-nav {

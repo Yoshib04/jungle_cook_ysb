@@ -1,0 +1,44 @@
+{
+  "recipes": [
+    {
+      "id": "preset0",
+      "name": "Supreme Pizza",
+      "image": "images/recipe-pizza.jpg",
+      "description": "Make pizza night super duper out of this world with homemade pizza. This recipe is supreme with vegetables and two types of meat. Yum!",
+      "time": "1h 24min",
+      "servings": "4 servings",
+      "ingredients": ["1/4 batch pizza dough", "2 tablespoons Last-Minute Pizza Sauce", "10 slices pepperoni", "1 cup cooked and crumbled Italian sausage", "2 large mushrooms, sliced", "1/4 bell pepper, sliced", "1 tablespoon sliced black olives", "1 cup shredded mozzarella cheese"],
+      "instructions": ["Preheat the oven to 475°. Spray pizza pan with nonstick cooking or line a baking sheet with parchment paper.", "Flatten dough into a thin round and place on the pizza pan.", "Spread pizza sauce over the dough.", "Layer the toppings over the dough in the order listed.", "Bake for 8 to 10 minutes or until the crust is crisp and the cheese melted and lightly browned."]
+    },
+    {
+      "id": "preset1",
+      "name": "Classic Burger",
+      "image": "images/recipe-burger.jpg",
+      "description": "Sink your teeth into a delicious restaurant-style, hamburger recipe made from lean beef. Skip the prepackaged patties and take the extra time to craft up your own, and that little extra effort will be worth it.",
+      "time": "30 min",
+      "servings": "4 servings",
+      "ingredients": ["1 lb Ground Beef", "1/2 onion, finely chopped", "1/4 cup dried bread crumbs", "1 tablespoon worcestershire sauce", "1 teaspoon salt", "1/2 teaspoon garlic powder", "4 hamburger buns"],
+      "instructions": ["Preheat grill for high heat.", "In a large bowl, mix the ground beef, onion, bread crumbs, Worcestershire sauce, salt, and garlic powder.", "Form mixture into 4 patties.", "Lightly oil the grill grate. Grill patties 5 minutes per side, or until well done.", "Serve on buns with your favorite toppings."]
+    },
+    {
+      "id": "preset2",
+      "name": "Chicken Biryani",
+      "image": "images/recipe-pilaf.jpg",
+      "description": "Chicken Biryani is a bold and flavorful Indian dish with crazy tender bites of chicken with bell peppers in a deliciously spiced and fragrant rice.",
+      "time": "1h 15min",
+      "servings": "6 servings",
+      "ingredients": ["2 cups basmati rice", "2 lbs chicken thighs", "1 cup yogurt", "2 tbsp ginger garlic paste", "1 tbsp garam masala", "1/2 tsp turmeric", "Fresh cilantro", "Fried onions"],
+      "instructions": ["Marinate chicken with yogurt and spices for 30 mins.", "Cook basmati rice until 70% done.", "In a pot, layer the marinated chicken and the partially cooked rice.", "Top with fried onions and cilantro.", "Cover and cook on low heat (steam) for 40 minutes."]
+    },
+    {
+      "id": "preset3",
+      "name": "Ch. Chow Mein",
+      "image": "images/recipe-chowmein.jpg",
+      "description": "A great Chow Mein comes down to the sauce - it takes more than just soy sauce and sugar! Jam packed with a surprising amount of hidden vegetables, customize this Chicken Chow Mein recipe using your protein of choice!",
+      "time": "20 min",
+      "servings": "4 servings",
+      "ingredients": ["8 oz chow mein noodles", "2 chicken breasts, sliced", "2 cups cabbage, shredded", "1 carrot, julienned", "2 tbsp soy sauce", "1 tbsp oyster sauce", "1 tsp sesame oil"],
+      "instructions": ["Cook noodles according to package instructions.", "Stir fry chicken until cooked through.", "Add vegetables and stir fry for 2 minutes.", "Add cooked noodles and sauce mixture.", "Toss everything together and serve hot."]
+    }
+  ]
+}

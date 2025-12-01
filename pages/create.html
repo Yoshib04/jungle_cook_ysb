@@ -1,0 +1,97 @@
+<div class="create-container">
+  <div class="create-header">
+    <h1 id="form-title">Hey Michael, create your recipe!</h1>
+  </div>
+
+  <form id="recipe-form">
+    <!-- Image Upload Section -->
+    <div class="input-group">
+      <!-- 1. The Real File Input (Hidden) -->
+      <input
+        type="file"
+        id="real-file-btn"
+        accept="image/*"
+        style="display: none"
+      />
+
+      <!-- 2. The Visual Input (Read Only, just shows filename) -->
+      <input
+        type="text"
+        id="file-name-display"
+        required
+        placeholder=" "
+        readonly
+      />
+
+      <!-- 3. The Label -->
+      <label>Add Recipe Image</label>
+
+      <!-- 4. The Pink Button -->
+      <span class="attach-btn" id="custom-attach-btn">Attach file</span>
+    </div>
+
+    <!-- Basic Info -->
+    <div class="input-group">
+      <input type="text" id="recipe-name" required placeholder=" " />
+      <label>Recipe Name</label>
+    </div>
+    <div class="input-group">
+      <input type="text" id="recipe-desc" required placeholder=" " />
+      <label>Recipe Description</label>
+    </div>
+    <div class="input-group">
+      <input type="text" id="recipe-time" required placeholder=" " />
+      <label>Recipe Total Time</label>
+    </div>
+    <div class="input-group">
+      <input type="text" id="recipe-servings" required placeholder=" " />
+      <label>Recipe Serving Size</label>
+    </div>
+
+    <!-- Dynamic Ingredients -->
+    <div class="dynamic-section">
+      <h3>Enter Ingredients:</h3>
+      <div id="ingredients-list">
+        <div class="input-group">
+          <input type="text" class="ing-input" placeholder=" " />
+          <label>Ingredient #1</label>
+        </div>
+        <div class="input-group">
+          <input type="text" class="ing-input" placeholder=" " />
+          <label>Ingredient #2</label>
+        </div>
+        <div class="input-group">
+          <input type="text" class="ing-input" placeholder=" " />
+          <label>Ingredient #3</label>
+          <button type="button" class="add-btn" id="add-ing">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dynamic Instructions -->
+    <div class="dynamic-section">
+      <h3>Enter Instructions:</h3>
+      <div id="instructions-list">
+        <div class="input-group">
+          <input type="text" class="inst-input" placeholder=" " />
+          <label>Instruction #1</label>
+        </div>
+        <div class="input-group">
+          <input type="text" class="inst-input" placeholder=" " />
+          <label>Instruction #2</label>
+        </div>
+        <div class="input-group">
+          <input type="text" class="inst-input" placeholder=" " />
+          <label>Instruction #3</label>
+          <button type="button" class="add-btn" id="add-inst">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-wrapper">
+      <button type="submit" class="pink-btn" id="submit-btn">
+        Create Recipe
+      </button>
+    </div>
+  </form>
+</div>

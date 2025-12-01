@@ -1,0 +1,33 @@
+
+.your-recipes-container {
+  .recipe-card {
+    .card-buttons {
+      position: absolute;
+      bottom: 20px;
+      left: 30px;
+      display: flex;
+      gap: 10px;
+
+      button {
+        padding: 8px 20px;
+        border-radius: 20px;
+        border: none;
+        font-family: 'Caveat', cursive;
+        font-size: 1.1rem;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+      }
+
+      .btn-view {
+        background-color: #ffd972;
+      }
+      .btn-edit {
+        background-color: #ffd972;
+      }
+      .btn-delete {
+        background-color: #ffd972; /* User screenshot shows all yellow */
+      }
+    }
+  }
+}
